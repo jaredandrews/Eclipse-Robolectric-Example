@@ -26,6 +26,6 @@ public class SampleTest {
 	
 	@Test
 	public void testThatFails() throws Exception {
-		assertThat(5, equals(2+2));
+		assertThat(5, equalTo(2+2));
 	}
 }
