@@ -23,4 +23,9 @@ public class SampleTest {
 		String appName = new MainActivity().getResources().getString(R.string.app_name);
 		assertThat(appName, equalTo("android-project"));
 	}
+	
+	@Test
+	public void testThatFails() throws Exception {
+		assertThat(5, equals(2+2));
+	}
 }
