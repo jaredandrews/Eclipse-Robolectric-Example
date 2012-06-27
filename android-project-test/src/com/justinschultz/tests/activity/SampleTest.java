@@ -17,4 +17,10 @@ public class SampleTest {
         String helloFromActivity = new MainActivity().getResources().getString(R.string.hello);
         assertThat(helloFromActivity, equalTo("Hello World, MainActivity!"));
     }
+	
+	@Test
+	public void testAppName() throws Exception {
+		String appName = new MainActivity().getResources().getString(R.string.app_name);
+		assertThat(appName, equalTo("android-project"));
+	}
 }
