@@ -1,6 +1,7 @@
 package com.justinschultz.androidproject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -13,7 +14,12 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
     }
     
-    public void onButtonClick(View view) {
+    public void onButton1Click(View view) {
     	Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show();  
+    }
+    
+    public void onButton2Click(View view) {
+    	Intent second = new Intent(MainActivity.this, SecondActivity.class);
+    	startActivity(second);
     }
 }

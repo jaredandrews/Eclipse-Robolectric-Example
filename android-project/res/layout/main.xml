@@ -13,7 +13,14 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onButtonClick" 
+        android:onClick="onButton1Click" 
         android:text="Test" />
+    
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onButton2Click" 
+        android:text="Go to next activity" />
 
 </LinearLayout>
