@@ -1,8 +1,13 @@
 package com.justinschultz.tests.activity;
 
+import android.app.Activity;
+import android.widget.Button;
+
 import com.justinschultz.androidproject.MainActivity;
 import com.justinschultz.androidproject.R;
 import com.justinschultz.tests.runner.SampleTestRunner;
+import com.xtremelabs.robolectric.shadows.ShadowHandler;
+import com.xtremelabs.robolectric.shadows.ShadowToast;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,5 +32,15 @@ public class SampleTest {
 	@Test
 	public void testThatFails() throws Exception {
 		assertThat(4, equalTo(2+2));
+	}
+	
+	@Test
+	public void testButton1Toast() throws Exception {
+		MainActivity mainActivity = new MainActivity();	
+		mainActivity.onCreate(null);
+		Button button1 = (Button) mainActivity.findViewById(R.id.button1);
+		button1.performClick();
+		ShadowHandler.idleMainLooper();
+		assertThat(ShadowToast.getTextOfLatestToast(), equalTo("Button clicked!"));
 	}
 }
