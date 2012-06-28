@@ -7,13 +7,16 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/second_info" />
+        android:text="@string/third_info" />
     
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+    <EditText
+    	android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onButton1Click" 
-        android:text="Go to next activity" />
+        android:id="@+id/edittext1" />
+    
+    <EditText
+    	android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittext2" />
 
 </LinearLayout>
