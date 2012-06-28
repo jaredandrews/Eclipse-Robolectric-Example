@@ -20,6 +20,7 @@ import org.junit.runner.RunWith;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 @RunWith(SampleTestRunner.class)
 public class ThirdActivityTest {
@@ -42,5 +43,10 @@ public class ThirdActivityTest {
 		String edittext2String = edittext2.getText().toString();
 		assertThat(edittext2String, equalTo("GOOGLE IS YOUR FRIEND."));
 	}	
+	
+	@Test
+	public void thisTestFails() throws Exception {
+		fail();
+	}
 
 }
