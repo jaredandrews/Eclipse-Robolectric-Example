@@ -1,3 +1,4 @@
+
 package com.justinschultz.androidproject;
 
 import android.app.Activity;
@@ -15,7 +16,7 @@ public class MainActivity extends Activity {
     }
     
     public void onButton1Click(View view) {
-    	Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show();  
+    	Toast.makeText(this, "Button pressed!", Toast.LENGTH_SHORT).show();  
     }
     
     public void onButton2Click(View view) {
